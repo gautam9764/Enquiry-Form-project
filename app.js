@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 
+const confidb = require('./config/db');
+
 app.set("view engine" , 'ejs')
 
 app.get("/" , (req,res)=>{
