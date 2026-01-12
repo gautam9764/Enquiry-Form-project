@@ -1,15 +1,15 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 
-const confidb = require('./config/db');
+const confidb = require("./config/db");
 
-app.set("view engine" , 'ejs')
+app.set("view engine", "ejs");
 
-app.get("/" , (req,res)=>{
-    res.send("hello word");
+app.get("/", (req, res) => {
+  res.send("hello word");
 });
-app.get("/form" , (req,res) =>{
-    res.render('index');
+app.get("/form", (req, res) => {
+  res.render("index");
 });
 
 app.listen(3000);
