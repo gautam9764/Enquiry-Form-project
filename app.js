@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 
 const confidb = require("./config/db");
+const userModel = require("./models/user");
 
 app.set("view engine", "ejs");
 
