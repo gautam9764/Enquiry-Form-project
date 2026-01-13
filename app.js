@@ -20,8 +20,18 @@ app.get("/form", (req, res) => {
 //   console.log(req.query);
 //   res.send("form dan");
 // });
-app.post("/form-data", (req, res) => {
+app.post("/form-data", async (req, res) => {
   console.log(req.body);
+  const { fullname, email, mobile, subject, message } = req.body;
+
+  await userModel.create({
+    fullname: fullname,
+    email: email,
+    mobile: mobile,
+    subject: subject,
+    message: message,
+  });
+
   res.send("form dan");
 });
 app.listen(30001);
