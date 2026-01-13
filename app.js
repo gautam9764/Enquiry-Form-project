@@ -13,5 +13,8 @@ app.get("/", (req, res) => {
 app.get("/form", (req, res) => {
   res.render("index");
 });
-
+app.get("/form-data" ,(req ,res)=>{
+  console.log(req.query);
+  res.send("form dan");
+});
 app.listen(30001);
