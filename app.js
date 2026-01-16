@@ -32,6 +32,7 @@ app.post("/form-data", async (req, res) => {
     message: message,
   });
 
-  res.send("form dan");
+  // res.send("form dan");
+  res.render("submit");
 });
 app.listen(3000);
